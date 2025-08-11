@@ -1,13 +1,14 @@
+/* --- General Setup --- */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f2f5;
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea al inicio para pantallas largas */
+    align-items: flex-start;
     min-height: 100vh;
     margin: 0;
-    padding: 10px 0; /* Añade un poco de espacio vertical */
+    padding: 10px 0;
 }
 
 .container {
@@ -19,15 +20,16 @@ body {
     padding: 20px;
 }
 
+/* --- Header & Navigation --- */
 header {
     text-align: center;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ffc107; /* Saitama yellow */
+    border-bottom: 2px solid #ffc107; /* Saitama's yellow */
     padding-bottom: 15px;
 }
 
 header h1 {
-    color: #d32f2f; /* Saitama red */
+    color: #d32f2f; /* Saitama's red */
     margin: 0;
     font-size: 2em;
 }
@@ -61,6 +63,7 @@ header h1 {
     margin: 0 10px;
 }
 
+/* --- Calendar Grid --- */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -112,39 +115,36 @@ header h1 {
     accent-color: #d32f2f;
 }
 
-/* ======================================= */
-/* ====== ESTILOS PARA MÓVILES AQUÍ ====== */
-/* ======================================= */
-
+/* --- Mobile Responsive Styles --- */
 @media (max-width: 768px) {
     body {
-        padding: 0; /* Sin padding en el body en móvil */
+        padding: 0;
     }
     .container {
         width: 100%;
-        border-radius: 0; /* Bordes rectos para ocupar toda la pantalla */
+        border-radius: 0; /* Full-width on mobile */
         padding: 15px 10px;
         min-height: 100vh;
         box-shadow: none;
     }
 
     header h1 {
-        font-size: 1.5em; /* Título más pequeño */
+        font-size: 1.5em; /* Smaller titles on small screens */
     }
 
     #current-month-year {
-        font-size: 1.2em; /* Mes y año más pequeños */
+        font-size: 1.2em;
     }
     
     .nav button {
-        padding: 8px 12px; /* Botones más pequeños */
+        padding: 8px 12px; /* Smaller buttons */
         font-size: 1em;
     }
 
     .day {
-        min-height: 100px; /* Celdas del día más bajas */
+        min-height: 100px; /* Compact day cells */
         padding: 5px;
-        font-size: 0.8em; /* Fuente más pequeña dentro de las celdas */
+        font-size: 0.8em;
     }
 
     .day-number {
@@ -153,13 +153,12 @@ header h1 {
     }
 
     .tasks li {
-        font-size: 0.85em; /* Texto de las tareas más pequeño */
-        /* Hacemos que la etiqueta ocupe más espacio para facilitar el clic */
+        font-size: 0.85em;
         flex-grow: 1; 
     }
     
     .tasks label {
         display: block;
-        width: 100%;
+        width: 100%; /* Make labels easier to tap */
     }
 }
