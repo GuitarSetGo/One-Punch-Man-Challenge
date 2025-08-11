@@ -17,13 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth();
 
-        const monthName = new Intl.DateTimeFormat('es-ES', { month: 'long' }).format(currentDate);
-        currentMonthYearEl.textContent = `${monthName.charAt(0).toUpperCase() + monthName.slice(1)} ${year}`;
+        // CAMBIO AQUÍ: Formato de fecha a inglés (en-US)
+        const monthName = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(currentDate);
+        currentMonthYearEl.textContent = `${monthName} ${year}`;
 
         const firstDayOfMonth = new Date(year, month, 1).getDay();
         const daysInMonth = new Date(year, month + 1, 0).getDate();
 
-        // Ajuste para que la semana empiece en Lunes (si getDay() da 0 para Domingo)
+        // Ajuste para que la semana empiece en Monday (si getDay() da 0 para Sunday)
+        // JavaScript getDay() returns 0 for Sunday, 1 for Monday, ..., 6 for Saturday
+        // We want Monday to be the first day in the grid, so we adjust the offset.
         const dayOffset = (firstDayOfMonth === 0) ? 6 : firstDayOfMonth - 1;
 
         // Crear celdas vacías para los días del mes anterior
