@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Changed to 'en' for English -->
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- ESTA ES LA LÍNEA CLAVE PARA MÓVILES -->
+    <!-- The viewport meta tag is crucial for mobile responsiveness. Don't remove it. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>One Punch Man Challenge Calendar</title>
+    
+    <!-- Fonts and Styles -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="container">
         <header>
             <h1>One Punch Man Challenge</h1>
@@ -20,10 +24,13 @@
                 <button id="next-month-btn">&gt;</button>
             </div>
         </header>
-        <div id="calendar-grid" class="calendar-grid">
-            <!-- Calendar days are generated here by JavaScript -->
-        </div>
+        
+        <!-- JS will build the calendar grid in here -->
+        <div id="calendar-grid" class="calendar-grid"></div>
     </div>
+
+    <!-- Main script -->
     <script src="script.js"></script>
+
 </body>
 </html>
