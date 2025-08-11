@@ -4,9 +4,10 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinea al inicio para pantallas largas */
     min-height: 100vh;
     margin: 0;
+    padding: 10px 0; /* Añade un poco de espacio vertical */
 }
 
 .container {
@@ -21,13 +22,14 @@ body {
 header {
     text-align: center;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ffc107; /* Color amarillo Saitama */
+    border-bottom: 2px solid #ffc107; /* Saitama yellow */
     padding-bottom: 15px;
 }
 
 header h1 {
-    color: #d32f2f; /* Color rojo Saitama */
+    color: #d32f2f; /* Saitama red */
     margin: 0;
+    font-size: 2em;
 }
 
 .nav {
@@ -56,6 +58,7 @@ header h1 {
     color: #333;
     font-weight: 700;
     font-size: 1.5em;
+    margin: 0 10px;
 }
 
 .calendar-grid {
@@ -71,6 +74,8 @@ header h1 {
     min-height: 150px;
     background-color: #fafafa;
     transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .day:hover {
@@ -92,15 +97,69 @@ header h1 {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1;
 }
 
 .tasks li {
     font-size: 0.9em;
     display: flex;
     align-items: center;
+    margin-bottom: 4px;
 }
 
 .tasks input[type="checkbox"] {
     margin-right: 8px;
     accent-color: #d32f2f;
+}
+
+/* ======================================= */
+/* ====== ESTILOS PARA MÓVILES AQUÍ ====== */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 0; /* Sin padding en el body en móvil */
+    }
+    .container {
+        width: 100%;
+        border-radius: 0; /* Bordes rectos para ocupar toda la pantalla */
+        padding: 15px 10px;
+        min-height: 100vh;
+        box-shadow: none;
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Título más pequeño */
+    }
+
+    #current-month-year {
+        font-size: 1.2em; /* Mes y año más pequeños */
+    }
+    
+    .nav button {
+        padding: 8px 12px; /* Botones más pequeños */
+        font-size: 1em;
+    }
+
+    .day {
+        min-height: 100px; /* Celdas del día más bajas */
+        padding: 5px;
+        font-size: 0.8em; /* Fuente más pequeña dentro de las celdas */
+    }
+
+    .day-number {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .tasks li {
+        font-size: 0.85em; /* Texto de las tareas más pequeño */
+        /* Hacemos que la etiqueta ocupe más espacio para facilitar el clic */
+        flex-grow: 1; 
+    }
+    
+    .tasks label {
+        display: block;
+        width: 100%;
+    }
 }
