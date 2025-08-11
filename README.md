@@ -6,7 +6,7 @@
 
 > A simple and interactive web calendar to track your daily progress in the One Punch Man workout challenge. Never miss a day!
 
-**[View Live Demo](https://<GuitarSetGo>.github.io/one-punch-man-challenge-calendar/)**
+**[View Live Demo](https://guitarsetgo.github.io/One-Punch-Man-Challenge/)**
 
 This is a lightweight, no-backend web application designed to help users stay consistent with the "One Punch Man" workout routine. All data is stored locally in your browser, ensuring your privacy.
 
@@ -36,7 +36,7 @@ This application uses the browser's `localStorage` to save your progress. This m
 
 > Un calendario web simple e interactivo para seguir tu progreso diario en el reto de entrenamiento de One Punch Man. ¡No te saltes ni un día!
 
-**[Ver Demo en Vivo](https://<GuitarSetGo>.github.io/one-punch-man-challenge-calendar/)**
+**[Ver Demo en Vivo](https://guitarsetgo.github.io/One-Punch-Man-Challenge/)**
 
 
 Esta es una aplicación web ligera y sin backend, diseñada para ayudar a los usuarios a ser constantes con la rutina de entrenamiento "One Punch Man". Todos los datos se guardan localmente en tu navegador, garantizando tu privacidad.
